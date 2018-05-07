@@ -1,21 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pl.edu.ur.oopl9;
 
-/**
- *
- * @author maarchyl
- */
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.TreeSet;
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // ZADANIE 1
+        
+        int[] tab = new int[100];
+        System.out.println("Zadanie 1");
+        System.out.println("losowanie");
+        System.out.println("===========================");
+        Random r = new Random();
+        for (int i = 0; i < 100; i++) {
+            tab[i] = r.nextInt();
+            System.out.println(tab[i]);
+        }
+
+        System.out.println();
+        System.out.println("sortowanie");
+        System.out.println("===========================");
+        Arrays.sort(tab);
+        for (int i = 0; i < 100; i++) {
+            System.out.println(tab[i]);
+        }
+        // ZADANIE 2
+        
+        System.out.println();
+        System.out.println("Zadanie 2");
+        System.out.println("===========================");
+        int a;
+        Random losujLiczby = new Random();
+        TreeSet z = new TreeSet<>();
+        for (int i = 0; i < 100; i++) {
+            //losowane liczby bez zakresu
+            a = losujLiczby.nextInt();
+            z.add(a);
+
+        }
+        Iterator t = z.iterator();
+        while (t.hasNext()) {
+            System.out.println(t.next() + " ");
+        }
+        
     }
-    
 }
